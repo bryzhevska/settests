@@ -19,7 +19,7 @@ class ExplicitWaitTests(unittest.TestCase):
         account.click()
 
     def test_create_new_customer(self):
-        # click on Log In link to open Login page
+        # click on Log In link to open Login pages
         self.driver.find_element_by_link_text('ACCOUNT').click()
 
         # wait for My Account link in Menu

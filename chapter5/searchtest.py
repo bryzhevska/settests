@@ -9,7 +9,7 @@ class SearchProductTest(unittest.TestCase):
         self.driver.implicitly_wait(30)
         self.driver.maximize_window()
 
-        # navigate to the application home page
+        # navigate to the application home pages
         self.driver.get('http://demo-store.seleniumacademy.com/')
 
     def test_search_by_category(self):
@@ -23,7 +23,7 @@ class SearchProductTest(unittest.TestCase):
         self.search_field.submit()
 
         # get all the anchor elements which have product names displayed
-        # currently on result page using find_elements_by_xpath method
+        # currently on result pages using find_elements_by_xpath method
         products = self.driver\
             .find_elements_by_xpath("//h2[@class='product-name']/a")
 

@@ -10,7 +10,7 @@ driver = webdriver.Ie(ie_driver_path)
 driver.implicitly_wait(30)
 driver.maximize_window()
 
-# navigate to the application home page
+# navigate to the application home pages
 driver.get('http://demo-store.seleniumacademy.com/')
 
 # get the search textbox
@@ -22,7 +22,7 @@ search_field.send_keys('phones')
 search_field.submit()
 
 # get all the anchor elements which have product names displayed
-# currently on result page using find_elements_by_xpath method
+# currently on result pages using find_elements_by_xpath method
 products = driver.find_elements_by_xpath("//h2[@class='product-name']/a")
 
 # get the number of anchor elements found

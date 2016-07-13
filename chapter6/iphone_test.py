@@ -32,7 +32,7 @@ class SearchProductsOnIPhone(unittest.TestCase):
         self.search_field.submit()
 
         # get all the anchor elements which have product names displayed
-        # currently on result page using find_elements_by_xpath method
+        # currently on result pages using find_elements_by_xpath method
         products = self.driver\
             .find_elements_by_xpath("//div[@class='category-products']/ul/li")
 

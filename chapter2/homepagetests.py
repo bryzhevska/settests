@@ -9,23 +9,23 @@ class HomePageTest(unittest.TestCase):
     @classmethod
     def setUp(cls):
         # create a new Firefox session """
-        cls.driver = webdriver.Firefox()
+        cls.driver = webdriver.Chrome()
         cls.driver.implicitly_wait(30)
         cls.driver.maximize_window()
 
-        # navigate to the application home page """
+        # navigate to the application home pages """
         cls.driver.get('http://demo-store.seleniumacademy.com/')
 
     def test_search_field(self):
-        # check search field exists on Home page
+        # check search field exists on Home pages
         self.assertTrue(self.is_element_present(By.NAME, 'q'))
 
     def test_language_option(self):
-        # check language options dropdown on Home page
+        # check language options dropdown on Home pages
         self.assertTrue(self.is_element_present(By.ID, 'select-language'))
 
     def test_shopping_cart_empty_message(self):
-        # check content of My Shopping Cart block on Home page
+        # check content of My Shopping Cart block on Home pages
         shopping_cart_icon = self.driver.\
             find_element_by_css_selector('div.header-minicart span.icon')
         shopping_cart_icon.click()
@@ -46,7 +46,7 @@ class HomePageTest(unittest.TestCase):
 
     def is_element_present(self, how, what):
         """
-        Utility method to check presence of an element on page
+        Utility method to check presence of an element on pages
         :params how: By locator type
         :params what: locator value
         """

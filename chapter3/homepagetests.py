@@ -9,7 +9,7 @@ class HomePageTest(unittest.TestCase):
         cls.driver.implicitly_wait(30)
         cls.driver.maximize_window()
 
-        # navigate to the application home page
+        # navigate to the application home pages
         cls.driver.get('http://demo-store.seleniumacademy.com/')
 
     def test_search_text_field_max_length(self):
@@ -30,7 +30,7 @@ class HomePageTest(unittest.TestCase):
         # get the Account link
         account_link = self.driver.find_element_by_link_text('ACCOUNT')
 
-        # check My Account link is displayed/visible in the Home page footer
+        # check My Account link is displayed/visible in the Home pages footer
         self.assertTrue(account_link.is_displayed())
 
     def test_account_links(self):
@@ -38,7 +38,7 @@ class HomePageTest(unittest.TestCase):
         account_links = self.driver.\
             find_elements_by_partial_link_text('ACCOUNT')
 
-        # check Account and My Account link is displayed/visible in the Home page footer
+        # check Account and My Account link is displayed/visible in the Home pages footer
         self.assertTrue(len(account_links), 2)
 
     def test_count_of_promo_banners_images(self):
@@ -48,7 +48,7 @@ class HomePageTest(unittest.TestCase):
         # get images from the banner_list
         banners = banner_list.find_elements_by_tag_name('img')
 
-        # check there are 3 banners displayed on the page
+        # check there are 3 banners displayed on the pages
         self.assertEqual(3, len(banners))
 
     def test_vip_promo(self):
@@ -56,16 +56,16 @@ class HomePageTest(unittest.TestCase):
         vip_promo = self.driver.\
             find_element_by_xpath("//img[@alt='Shop Private Sales - Members Only']")
 
-        # check vip promo logo is displayed on home page
+        # check vip promo logo is displayed on home pages
         self.assertTrue(vip_promo.is_displayed())
-        # click on vip promo images to open the page
+        # click on vip promo images to open the pages
         vip_promo.click()
-        # check page title
+        # check pages title
         self.assertEqual("VIP", self.driver.title)
         print(self.driver.title)
 
     def test_shopping_cart_status(self):
-        # check content of My Shopping Cart block on Home page
+        # check content of My Shopping Cart block on Home pages
         # get the Shopping cart icon and click to open the Shopping Cart section
         shopping_cart_icon = self.driver.\
             find_element_by_css_selector('div.header-minicart span.icon')

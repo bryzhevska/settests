@@ -11,7 +11,7 @@ class NavigationTest(unittest.TestCase):
         self.driver.implicitly_wait(30)
         self.driver.maximize_window()
 
-        # navigate to the application home page
+        # navigate to the application home pages
         self.driver.get('http://www.google.com')
 
     def test_browser_navigation(self):

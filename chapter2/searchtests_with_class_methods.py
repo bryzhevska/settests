@@ -8,7 +8,7 @@ class SearchTests(unittest.TestCase):
         cls.driver.implicitly_wait(30)
         cls.driver.maximize_window()
 
-        # navigate to the application home page
+        # navigate to the application home pages
         cls.driver.get('http://demo-store.seleniumacademy.com/')
         cls.driver.title
 
@@ -22,7 +22,7 @@ class SearchTests(unittest.TestCase):
         self.search_field.submit()
 
         # get all the anchor elements which have product names displayed
-        # currently on result page using find_elements_by_xpath method
+        # currently on result pages using find_elements_by_xpath method
         products = self.driver. \
             find_elements_by_xpath("//h2[@class='product-name']/a")
         self.assertEqual(3, len(products))
@@ -37,7 +37,7 @@ class SearchTests(unittest.TestCase):
         self.search_field.submit()
 
         # get all the anchor elements which have product names displayed
-        # currently on result page using find_elements_by_xpath method
+        # currently on result pages using find_elements_by_xpath method
         products = self.driver.\
             find_elements_by_xpath("//h2[@class='product-name']/a")
         self.assertEqual(1, len(products))

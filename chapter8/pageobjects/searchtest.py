@@ -2,7 +2,6 @@ import unittest
 from pages.homepage import HomePage
 from base.basetestcase import BaseTestCase
 
-
 class SearchProductTest(BaseTestCase):
     def testSearchForProduct(self):
         homepage = HomePage(self.driver)

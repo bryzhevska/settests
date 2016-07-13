@@ -9,13 +9,13 @@ class RegisterNewUser(unittest.TestCase):
         self.driver.implicitly_wait(30)
         self.driver.maximize_window()
 
-        # navigate to the application home page
+        # navigate to the application home pages
         self.driver.get('http://demo-store.seleniumacademy.com/')
 
     def test_register_new_user(self):
         driver = self.driver
 
-        # click on Log In link to open Login page
+        # click on Log In link to open Login pages
         driver.find_element_by_link_text('ACCOUNT').click()
         driver.find_element_by_link_text('My Account').click()
 
